@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson-09</title>
+    <style>
+        .block {
+            height: 250px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .margin {
+            margin: 10px;
+        }
+
+        input:invalid {
+            border: 2px solid red;
+        }
+
+        input:valid {
+            border: 1px solid forestgreen;
+        }
+
+        .error.active {
+            padding: 0.3em;
+        }
+    </style>
+    <script src="script.js"></script>
+
+</head>
+<body>
+<form class="block">
+    <label>Name</label> <input type="text" id="name" class="margin">
+    <label>Surname</label> <input type="text" id="surname" class="margin">
+    <label>Age</label> <input type="number" id="age" class="margin" min="1" max="100">
+    <label>Adress</label> <input type="text" id="adress" class="margin">
+
+    <button type="submit" onclick="sendDataByGetMethod()" class="margin">Send by Get</button>
+    <button type="submit" onclick="sendDataByPostMethod()" class="margin">Send by Post</button>
+</form>
+
+</body>
+</html>
